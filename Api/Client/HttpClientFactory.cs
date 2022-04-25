@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace PetStore6.Client
+namespace PetStore6.Api.Client
 {
     public class HttpClientFactory
     {

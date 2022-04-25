@@ -1,4 +1,4 @@
-﻿using PetStore6.Models;
+﻿using PetStore6.Api.Models;
 
 namespace PetStore6.TestData
 {

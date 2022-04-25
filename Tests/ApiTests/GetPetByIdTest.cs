@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace PetStore6.ApiTests
+namespace PetStore6.Tests.ApiTests
 {
     [TestFixture]
     public class GetPetByIdTest : BaseTest

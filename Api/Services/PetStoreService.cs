@@ -1,8 +1,8 @@
-﻿using System;
+﻿using PetStore6.Api.Client;
+using System;
 using System.Net.Http;
-using PetStore6.Client;
 
-namespace PetStore6.Services
+namespace PetStore6.Api.Services
 {
     public class PetStoreService 
     {

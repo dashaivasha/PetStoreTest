@@ -1,11 +1,11 @@
 ﻿using System;
-using PetStore6.UITests.UITestData.Enums;
 using PetStore6.TestData;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Opera;
 using OpenQA.Selenium.Chrome;
+using PetStore6.Constants.Enums;
 
-namespace PetStore6.UITests.UITestData.WebDriver
+namespace PetStore6.Driver
 {
     public class DriverFactory
     { 
@@ -18,6 +18,7 @@ namespace PetStore6.UITests.UITestData.WebDriver
             {
                 if (_webDriver == null)
                     throw new NullReferenceException("The WebDriver instance was not initialize. You should call the metod InitilizerDriver()");
+
                 return _webDriver;
             }
             set
@@ -30,7 +31,8 @@ namespace PetStore6.UITests.UITestData.WebDriver
         {
             var browser = Data.Browser;
             Enum.TryParse(browser, out BrowserNameEnum browserNameEnum);
-            switch(browserNameEnum)
+
+            switch (browserNameEnum)
             {
                 case BrowserNameEnum.Chrome:
                     if(_webDriver == null)

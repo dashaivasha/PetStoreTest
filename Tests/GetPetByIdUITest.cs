@@ -1,5 +1,4 @@
-﻿using PetStore6.UITests;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace PetStore6.Tests
 {

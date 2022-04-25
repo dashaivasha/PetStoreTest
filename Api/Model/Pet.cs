@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PetStore6.Models
+namespace PetStore6.Api.Models
 {
     public class Pet
     {

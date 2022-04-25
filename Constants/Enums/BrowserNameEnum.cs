@@ -1,4 +1,4 @@
-﻿namespace PetStore6.UITests.UITestData.Enums
+﻿namespace PetStore6.Constants.Enums
 {
     public enum BrowserNameEnum
     {

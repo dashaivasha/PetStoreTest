@@ -2,12 +2,12 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace PetStore6.UITests.UITestData.WebDriver
+namespace PetStore6.Driver
 {
     public static class WebDriverExtensions
     {
-        public static TimeSpan DefaultPollingInterval = TimeSpan.FromMilliseconds(2);
-        public static TimeSpan Timeout = TimeSpan.FromSeconds(135);
+        private static TimeSpan _defaultPollingInterval = TimeSpan.FromMilliseconds(2);
+        private static TimeSpan _timeout = TimeSpan.FromSeconds(135);
 
         public static WebDriverWait GetWait(
             this IWebDriver driver,
@@ -15,9 +15,9 @@ namespace PetStore6.UITests.UITestData.WebDriver
             TimeSpan pollingInterval = default,
             Type[] exceeptionTypes = null)
         {
-            var wait = new WebDriverWait(driver, timeout.Ticks == 0 ? Timeout : timeout)
+            var wait = new WebDriverWait(driver, timeout.Ticks == 0 ? _timeout : timeout)
             {
-                PollingInterval = pollingInterval.Ticks == 0 ? DefaultPollingInterval : pollingInterval
+                PollingInterval = pollingInterval.Ticks == 0 ? _defaultPollingInterval : pollingInterval
             };
 
             wait.IgnoreExceptionTypes(exceeptionTypes ?? new[] { typeof(StaleElementReferenceException) });

@@ -1,9 +1,9 @@
-﻿using PetStore6.Models;
+﻿using PetStore6.Api.Models;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace PetStore6.Services
+namespace PetStore6.Api.Services
 {
     public class PetService : PetStoreService
     {

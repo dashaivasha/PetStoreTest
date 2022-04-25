@@ -1,18 +1,18 @@
 ﻿using OpenQA.Selenium;
+using PetStore6.Driver;
 using PetStore6.TestData;
-using PetStore6.UITests.UITestData.WebDriver;
 
-namespace PetStore6.UITests.PageObjects
+namespace PetStore6.PageObjects
 {
     public class BasePage 
     {
-        protected IWebDriver driver;
+        protected IWebDriver Driver;
         internal TestDetails Data = JsonManager.GetTestData();
 
         public BasePage()
         {
             DriverFactory.InitalizerDriver();
-            driver = DriverFactory.Driver;
+            Driver = DriverFactory.Driver;
         }
     }
 }
