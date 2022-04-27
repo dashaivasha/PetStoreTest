@@ -21,7 +21,7 @@ namespace PetStore6.Driver
 
                 return _webDriver;
             }
-            set
+            private set
             {
                 _webDriver = value;
             }

@@ -8,7 +8,7 @@ namespace PetStore6.Tests.ApiTests
         [Test]
         public void GetPetById()
         {
-            Pet.Equals(petService.GetPet("22").Result);
+          Assert.IsTrue(Pet == petService.GetPet(Pet.Id).Result);
         }
     }
 }

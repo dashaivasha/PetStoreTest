@@ -1,18 +1,23 @@
 ﻿using PetStore6.Api.Client;
 using System;
 using System.Net.Http;
+using PetStore6.TestData;
 
 namespace PetStore6.Api.Services
 {
     public class PetStoreService 
     {
         protected HttpClient _httpClient;
+        protected TestDetails Data = JsonManager.GetTestData();
 
         public PetStoreService()
         {
             HttpClientFactory.InitalizerClient();
             _httpClient = HttpClientFactory.HttpClient;
-            _httpClient.BaseAddress = new Uri("https://petstore.swagger.io/v2/");
+            if (_httpClient.BaseAddress == null)
+            {
+                _httpClient.BaseAddress = new Uri(Data.Url);
+            }
             _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
     }

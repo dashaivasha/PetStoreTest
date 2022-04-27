@@ -17,5 +17,12 @@ namespace PetStore6.TestData
 
             return pet;
         }
+
+        public static Order GetOrderFromJson()
+        {
+            Order order = DataSerializer.JsonDeserialize(typeof(Order), Globals.OrderPath) as Order;
+
+            return order;
+        }
     }
 }

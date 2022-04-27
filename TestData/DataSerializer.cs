@@ -12,12 +12,17 @@ namespace PetStore6.TestData
             try
             {
                 JObject obj = null;
-                var jsonSerializer = new JsonSerializer();
+
+                var jsonSerializer = new JsonSerializer
+                {
+                    DateParseHandling = DateParseHandling.None
+                };
 
                 if (File.Exists(filePath))
                 {
                     var sr = new StreamReader(filePath);
                     var jsonReader = new JsonTextReader(sr);
+
                     obj = jsonSerializer.Deserialize(jsonReader) as JObject;
                     jsonReader.Close();
                     sr.Close();

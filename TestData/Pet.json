@@ -1,20 +1,18 @@
 {
-    "id": 22,
-    "category": {
-        "id": 1,
-        "name": "Cat"
-    },
-    "name": "Amaya",
-    "photoUrls": [
-        "/1.png"
-    ],
-    "tags": [
-        {
-            "id": 2,
-            "name": "tag"
-        }
-    ],
-    "status": "available"
+  "id": 22,
+  "category": {
+    "id": 1,
+    "name": "Cat"
+  },
+  "name": "Amaya",
+  "photoUrls": [
+    "/1.png"
+  ],
+  "tags": [
+    {
+      "id": 2,
+      "name": "tag"
+    }
+  ],
+  "status": "available"
 }
-
-    
