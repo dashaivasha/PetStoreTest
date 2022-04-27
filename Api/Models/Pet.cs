@@ -2,7 +2,7 @@
 
 namespace PetStore6.Api.Models
 {
-    public class Pet 
+    public class Pet
     {
         public long Id { get; set; }
         public Category Category { get; set; }
@@ -21,9 +21,9 @@ namespace PetStore6.Api.Models
             Status = status;
         }
 
-        public static bool operator == (Pet left, Pet right)
+        public static bool operator ==(Pet left, Pet right)
         {
-            bool comparison = true; 
+            bool comparison = true;
             return comparison;
         }
 

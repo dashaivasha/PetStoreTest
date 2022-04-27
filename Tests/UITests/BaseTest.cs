@@ -8,7 +8,7 @@ using PetStore6.PageObjects;
 using PetStore6.TestData;
 using System.Net.Http;
 
-namespace PetStore6.Tests
+namespace PetStore6.Tests.UiTests
 {
     public class BaseTest
     {
@@ -26,14 +26,15 @@ namespace PetStore6.Tests
         {
             orderService.PostOrder(Order);
             petService.PostPet(Pet);
-            DriverFactory.InitalizerDriver();;
+            DriverFactory.InitalizerDriver(); ;
+            WebDriver.Manage().Window.Maximize();
             WebDriver.Navigate().GoToUrl(Data.HomePageUrl);
         }
 
         [OneTimeTearDown]
         public void Close()
         {
-           DriverFactory.QuitDriver();
+            DriverFactory.QuitDriver();
         }
     }
 }

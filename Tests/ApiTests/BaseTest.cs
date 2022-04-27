@@ -1,12 +1,10 @@
-﻿using PetStore6.TestData;
-
-using NUnit.Framework;
-
-using System.Net.Http;
+﻿using NUnit.Framework;
+using PetStore6.Api.Client;
 using PetStore6.Api.Models;
 using PetStore6.Api.Services;
-using PetStore6.Api.Client;
 using PetStore6.Constants;
+using PetStore6.TestData;
+using System.Net.Http;
 
 namespace PetStore6.Tests.ApiTests
 {

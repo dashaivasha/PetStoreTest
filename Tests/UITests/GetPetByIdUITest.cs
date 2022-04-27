@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using System.Net;
 
-namespace PetStore6.Tests
+namespace PetStore6.Tests.UiTests
 {
     [TestFixture]
     public class GetPetByIdUITest : BaseTest
@@ -9,9 +10,9 @@ namespace PetStore6.Tests
         public void GetPetById()
         {
             homePage.PressGetByIdButton();
-            homePage.EnterId("22");
+            homePage.EnterId(Pet.Id);
             homePage.Execute();
-            Assert.AreEqual(homePage.GetResponseCode(), 200);
-        }      
+            Assert.AreEqual(homePage.GetResponseCode(), (int)HttpStatusCode.OK);
+        }
     }
 }

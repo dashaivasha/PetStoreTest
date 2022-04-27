@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
+using NUnit.Framework;
 using System.Text;
 
 namespace PetStore6.Constants
@@ -49,5 +49,4 @@ namespace PetStore6.Constants
             }
         }
     }
-
 }

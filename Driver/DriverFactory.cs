@@ -1,14 +1,14 @@
 ﻿using System;
-using PetStore6.TestData;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Opera;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Opera;
 using PetStore6.Constants.Enums;
+using PetStore6.TestData;
 
 namespace PetStore6.Driver
 {
     public class DriverFactory
-    { 
+    {
         private static IWebDriver? _webDriver;
         public static TestDetails Data = JsonManager.GetTestData();
 
@@ -42,7 +42,7 @@ namespace PetStore6.Driver
             switch (browserNameEnum)
             {
                 case BrowserNameEnum.Chrome:
-                    if(_webDriver == null)
+                    if (_webDriver == null)
                     {
                         _webDriver = new ChromeDriver(Globals.DriverPath);
                     }
@@ -55,5 +55,5 @@ namespace PetStore6.Driver
                     break;
             }
         }
-    }  
+    }
 }

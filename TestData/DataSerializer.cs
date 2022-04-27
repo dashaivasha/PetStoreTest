@@ -1,7 +1,7 @@
-﻿using System;
-using System.IO;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.IO;
 
 namespace PetStore6.TestData
 {
@@ -30,7 +30,7 @@ namespace PetStore6.TestData
 
                 return obj.ToObject(dataType);
             }
-            catch 
+            catch
             {
                 throw;
             }

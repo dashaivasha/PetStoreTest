@@ -1,5 +1,5 @@
-﻿using PetStore6.Api.Client;
-using System;
+﻿using System;
+using PetStore6.Api.Client;
 using System.Net.Http;
 using PetStore6.TestData;
 
@@ -14,10 +14,12 @@ namespace PetStore6.Api.Services
         {
             HttpClientFactory.InitalizerClient();
             _httpClient = HttpClientFactory.HttpClient;
+
             if (_httpClient.BaseAddress == null)
             {
                 _httpClient.BaseAddress = new Uri(Data.Url);
             }
+
             _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
     }

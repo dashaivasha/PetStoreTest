@@ -36,7 +36,7 @@ namespace PetStore6.Api.Models
         public DateTime DataTimeParse(string date)
         {
             var dateFormatString = "MM'/'dd'/'yyyy HH:mm:ss";
-            DateTime oDate = DateTime.ParseExact(date, dateFormatString , null);
+            DateTime oDate = DateTime.ParseExact(date, dateFormatString, null);
 
             return oDate;
         }

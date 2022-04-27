@@ -1,7 +1,7 @@
-﻿using System.Net.Http;
+﻿using PetStore6.Api.Models;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using PetStore6.Api.Models;
 
 namespace PetStore6.Api.Services
 {
@@ -17,7 +17,7 @@ namespace PetStore6.Api.Services
 
         public HttpResponseMessage PostOrder(Order order)
         {
-             var response = _httpClient.PostAsJsonAsync($"store/order", order).Result;
+            var response = _httpClient.PostAsJsonAsync($"store/order", order).Result;
             return response;
         }
     }

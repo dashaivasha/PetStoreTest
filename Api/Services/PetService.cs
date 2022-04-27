@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using PetStore6.Constants.Enums;
 
 namespace PetStore6.Api.Services
 {
@@ -19,7 +18,7 @@ namespace PetStore6.Api.Services
         $"pet/{id}");
 
         public bool GetPet(long id, Pet pet)
-        {    
+        {
             return pet == GetPet(id).Result; ;
         }
 
@@ -46,7 +45,7 @@ namespace PetStore6.Api.Services
             return response;
         }
 
-        public async  Task<IEnumerable<Pet>?> GetPetsByStatus(string status) =>
+        public async Task<IEnumerable<Pet>?> GetPetsByStatus(string status) =>
         await _httpClient.GetFromJsonAsync<IEnumerable<Pet>>(
         $"pet/findByStatus?status={status}");
 

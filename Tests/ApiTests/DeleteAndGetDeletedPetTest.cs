@@ -4,7 +4,7 @@ using System.Net;
 namespace PetStore6.Tests.ApiTests
 {
     [TestFixture]
-    internal class DeleteAndGetDeletedPetTest: BaseTest
+    internal class DeleteAndGetDeletedPetTest : BaseTest
     {
         [Test]
         public void DeleteAndGetPet()
