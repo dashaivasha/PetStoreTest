@@ -9,7 +9,7 @@ namespace PetStore6.Driver
 {
     public class DriverFactory
     { 
-        private static IWebDriver _webDriver;
+        private static IWebDriver? _webDriver;
         public static TestDetails Data = JsonManager.GetTestData();
 
         public static IWebDriver Driver
@@ -25,7 +25,14 @@ namespace PetStore6.Driver
             {
                 _webDriver = value;
             }
-         }
+        }
+
+        public static void QuitDriver()
+        {
+            _webDriver?.Quit();
+            _webDriver?.Dispose();
+            _webDriver = null;
+        }
 
         public static void InitalizerDriver()
         {

@@ -33,7 +33,7 @@ namespace PetStore6.Tests
         [OneTimeTearDown]
         public void Close()
         {
-            WebDriver.Close();
+           DriverFactory.QuitDriver();
         }
     }
 }
