@@ -1,0 +1,7 @@
+{
+  "Url": "https://petstore.swagger.io/v2/",
+  "HomePageUrl": "https://petstore.swagger.io/",
+  "WaitTime": 20,
+  "Browser": "Chrome",
+  "Api_key": "special-key"
+}
