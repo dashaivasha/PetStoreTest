@@ -12,7 +12,7 @@ namespace PetStore6.Tests.ApiTests
     {
         public Pet Pet = JsonManager.GetPetFromJson();
         public Order Order = JsonManager.GetOrderFromJson();
-        public HttpClient httpClient => HttpClientFactory.HttpClient;
+        public HttpClient HttpClient => HttpClientFactory.HttpClient;
         internal PetService petService = new PetService();
         internal OrderService orderService = new OrderService();
         internal AssertsAccumulator AssertAccumulator = new AssertsAccumulator();

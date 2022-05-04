@@ -5,7 +5,7 @@ namespace PetStore6.Api.Client
 {
     public class HttpClientFactory
     {
-        private static HttpClient _httpClient;
+        private static HttpClient? _httpClient;
 
         public static HttpClient HttpClient
         {
